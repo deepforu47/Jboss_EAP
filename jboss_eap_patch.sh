@@ -127,7 +127,7 @@ echo "Patch file: $PATCH_FILE" | tee  -a $JBOSS_CONSOLE_LOG 2>&1
 # We can use any profile we want when patching the installation.
 #TODO: Add functionality to start JBoss EAP using the daemon function in RHEL/Linux.
 echo "Starting JBoss EAP in 'admin-only' mode."  | tee  -a $JBOSS_CONSOLE_LOG 2>&1
-/app/hmonline/scripts/jbossctl $INSTANCE start_admin  | tee -a $JBOSS_CONSOLE_LOG 2>&1 &
+$JBOSS_INSTALLATION_DIR/bin/standalone.sh -c standalone.xml -Djboss.server.base.dir=../$INSTANCE --admin-only  | tee -a $JBOSS_CONSOLE_LOG 2>&1 &
 
 #Replace ports with what you have configured
 if [[ $INSTANCE == node1 ]]; then
