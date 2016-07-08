@@ -13,7 +13,6 @@ VALID_INSTANCES=( node1 node2 node3 )
 function contains_element() {
     local e
     for e in "${@:2}"; do [[ "$e" == "$1" ]] && return 0; done
-        #echo "in function $e";done
     return 1
 }
 
@@ -137,7 +136,7 @@ if [[ $INSTANCE == node1 ]]; then
 		elif [[ $INSTANCE == node3 ]]; then
 			port=10299
 fi
-echo "$INSTANCE:$port"
+
 # Some wait code. Wait till the system is ready. Basically copied from the EAP .sh scripts.
 count=0
 launched=false
