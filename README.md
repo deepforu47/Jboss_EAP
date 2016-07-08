@@ -5,7 +5,7 @@
 ------------
 
 * Allows to Install patches on JbossEAP-6.*
-* Use be used to install on multiple profiles (e.g. $JBOSS_HOME/<profiles1>, $JBOSS_HOME/<profile2>, etc.)
+* Use be used to install on multiple profiles (e.g. $JBOSS_HOME/node1, $JBOSS_HOME/node2 etc.)
 * Bash script using Jboss CLI to intract with Server.
 * Instance should be down before executing script.
 * It will start script only in admin-mode, so startup will be too fast.
