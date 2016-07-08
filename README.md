@@ -59,4 +59,7 @@ Within script we are shuting down instance after doing all changes.
     
       ```
   
+##Note-
+      This has been tested on EAP-6.4.
+      
 Thanks!
